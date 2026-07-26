@@ -16,7 +16,7 @@ export function AnimatedSection({
   id,
   dark = false,
 }: AnimatedSectionProps) {
-  const bg = dark ? "bg-dark text-white" : "bg-white text-dark";
+  const bg = dark ? "section-mesh-dark text-white" : "section-mesh-light text-ink";
 
   return (
     <section id={id} className={`${bg} ${className}`}>

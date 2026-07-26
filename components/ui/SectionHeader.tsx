@@ -10,6 +10,7 @@ type SectionHeaderProps = {
   align?: "left" | "center";
   dark?: boolean;
   className?: string;
+  eyebrow?: string;
 };
 
 export function SectionHeader({
@@ -19,33 +20,49 @@ export function SectionHeader({
   align = "center",
   dark = false,
   className = "",
+  eyebrow,
 }: SectionHeaderProps) {
   const alignClass = align === "center" ? "text-center mx-auto" : "";
-  const titleColor = dark ? "text-white" : "text-dark";
-  const mutedColor = dark ? "text-white/70" : "text-dark/60";
+  const titleColor = dark ? "text-white" : "text-ink";
+  const mutedColor = dark ? "text-white/60" : "text-muted";
 
   return (
-    <motion.div
-      className={`max-w-3xl ${alignClass} ${className}`}
+    <motion.header
+      className={`max-w-4xl ${alignClass} ${className}`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={fadeUp as Variants}
       transition={defaultTransition}
     >
-      {subtitle && (
-        <p className={`text-sm font-semibold uppercase tracking-[0.2em] ${dark ? "text-primary-light" : "text-primary"}`}>
-          {subtitle}
-        </p>
+      {(eyebrow || subtitle) && (
+        <div className={`mb-4 ${align === "center" ? "text-center" : ""}`}>
+          {eyebrow && (
+            <p
+              className={`inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] ${
+                dark ? "text-accent" : "text-primary"
+              } ${align === "center" ? "justify-center w-full" : ""}`}
+            >
+              <span className={`h-px w-8 ${dark ? "bg-accent/50" : "bg-primary/40"}`} aria-hidden />
+              {eyebrow}
+              {align === "center" && (
+                <span className={`h-px w-8 ${dark ? "bg-accent/50" : "bg-primary/40"}`} aria-hidden />
+              )}
+            </p>
+          )}
+          {subtitle && (
+            <p className={`mt-3 text-body-lg ${mutedColor} ${align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl"}`}>
+              {subtitle}
+            </p>
+          )}
+        </div>
       )}
-      <h2 className={`mt-3 text-3xl font-bold sm:text-4xl lg:text-[2.75rem] leading-tight ${titleColor}`}>
-        {title}
-      </h2>
+      <h2 className={`text-section-title ${titleColor}`}>{title}</h2>
       {description && (
-        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${mutedColor}`}>
+        <p className={`mt-5 max-w-2xl text-body-lg ${mutedColor} ${align === "center" ? "mx-auto" : ""}`}>
           {description}
         </p>
       )}
-    </motion.div>
+    </motion.header>
   );
 }

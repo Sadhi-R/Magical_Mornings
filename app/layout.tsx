@@ -1,11 +1,12 @@
-import { Inter, Noto_Sans_Telugu, Space_Grotesk } from "next/font/google";
+import { Noto_Sans_Telugu, Poppins } from "next/font/google";
 import type { Metadata } from "next";
-import { seo } from "@/data/content";
+import { seo, site } from "@/data/content";
 import "./globals.css";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -16,19 +17,11 @@ const notoTelugu = Noto_Sans_Telugu({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const siteUrl = "https://magicalmornings.lawofleadership.in";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(site.siteUrl),
   title: seo.title,
   description: seo.description,
-  keywords: seo.keywords,
+  keywords: [...seo.keywords],
   icons: {
     icon: "/favicon.png",
   },
@@ -36,14 +29,15 @@ export const metadata: Metadata = {
     title: seo.title,
     description: seo.description,
     type: "website",
-    siteName: seo.title,
+    siteName: site.productName,
+    url: site.siteUrl,
     locale: "en_IN",
     images: [
       {
-        url: "/images/mentors/sampath-kumar.jpg",
-        width: 800,
-        height: 1000,
-        alt: "Magical Mornings by The Law of Leadership",
+        url: "/images/magical-mornings-banner.png",
+        width: 1024,
+        height: 768,
+        alt: "Magical Mornings by 10x Wealth Creators",
       },
     ],
   },
@@ -51,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
-    images: ["/images/mentors/sampath-kumar.jpg"],
+    images: ["/images/magical-mornings-banner.png"],
   },
   robots: {
     index: true,
@@ -65,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${notoTelugu.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${notoTelugu.variable}`}>
       <body className="min-h-screen">{children}</body>
     </html>
   );

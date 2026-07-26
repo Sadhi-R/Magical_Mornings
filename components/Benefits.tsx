@@ -26,9 +26,9 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Benefits() {
   return (
-    <section id="benefits" className="bg-dark section-padding">
+    <section id="benefits" className="section-tint-blue section-padding">
       <div className="section-container">
-        <SectionHeader title={joinTo.title} dark />
+        <SectionHeader title={joinTo.title} />
 
         <motion.div
           className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
@@ -44,15 +44,15 @@ export function Benefits() {
                 key={item.title}
                 variants={fadeUp}
                 transition={defaultTransition}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+              className="card-premium group"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary-light">
-                  <Icon className="h-5 w-5" aria-hidden />
-                </div>
-                <h3 className="mt-4 font-display text-base font-semibold text-white">
+                <motion.div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-soft text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                  <Icon className="h-6 w-6" aria-hidden />
+                </motion.div>
+                <h3 className="mt-4 font-display text-base font-bold text-navy">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                   {item.telugu}
                 </p>
               </motion.div>

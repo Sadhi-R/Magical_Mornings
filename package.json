@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
@@ -22,6 +23,7 @@
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.29.0",
     "eslint-config-next": "^15.3.4",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   }

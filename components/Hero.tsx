@@ -1,134 +1,115 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2, Sparkles, Star } from "lucide-react";
-import { hero, site } from "@/data/content";
+import { CheckCircle2, MapPin, Star, Users } from "lucide-react";
+import { hero, offer, site, socialProof } from "@/data/content";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { defaultTransition, fadeUp, staggerContainer } from "@/lib/motion";
+
+const AVATARS = [
+  "/images/testimonials/sadhi.jpg",
+  "/images/testimonials/rajitha.jpg",
+  "/images/person.png",
+];
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-dark pt-24 pb-16 sm:pt-28">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(124,58,237,0.25)_0%,_transparent_55%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-primary/20 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-primary-light/15 blur-3xl"
-      />
+    <section className="section-mesh-light relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <motion.div
+          className="absolute -left-40 -top-24 h-[520px] w-[520px] rounded-full bg-accent/25 blur-[130px]"
+          animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.08, 1] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -right-32 top-1/3 h-[480px] w-[480px] rounded-full bg-primary/20 blur-[130px]"
+          animate={{ opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-1/3 h-[380px] w-[380px] rounded-full bg-info/15 blur-[120px]"
+          animate={{ opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
 
-      <div className="section-container relative grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16 section-padding">
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-          <motion.span
+      <div className="section-container relative grid items-center gap-14 pb-20 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:pb-28 lg:pt-20">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex flex-col">
+          <motion.div
             variants={fadeUp}
             transition={defaultTransition}
-            className="badge-pill border border-primary/30 bg-primary/10 text-primary-light"
+            className="flex flex-wrap items-center gap-3"
           >
-            {site.badge}
-          </motion.span>
-
-          <motion.p
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/50"
-          >
-            {site.brandName}
-          </motion.p>
+            <span className="badge-pill border border-accent/40 bg-accent-soft text-[#B45309]">
+              {site.badge}
+            </span>
+            <span className="badge-urgency">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
+              {socialProof.urgency}
+            </span>
+          </motion.div>
 
           <motion.h1
             variants={fadeUp}
             transition={defaultTransition}
-            className="mt-4 font-display text-2xl font-bold leading-snug text-white sm:text-3xl lg:text-[2rem] text-balance"
+            className="text-hero mt-7 text-navy"
           >
-            {hero.teluguHeadline}
+            {hero.headlineLead}{" "}
+            <span className="gradient-text">{hero.headlineAccent}</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             transition={defaultTransition}
-            className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg"
+            className="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-primary"
           >
-            {hero.englishSubheadline}
+            {hero.tagline}
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
+            transition={defaultTransition}
+            className="text-hero-sub mt-6 max-w-xl text-ink-soft"
+          >
+            {hero.subheadline} {hero.closingLine}
           </motion.p>
 
           <motion.div
             variants={fadeUp}
             transition={defaultTransition}
-            className="mt-6 flex flex-wrap gap-2"
+            className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
-            {hero.pillars.map((pillar) => (
-              <span
-                key={pillar.label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white/90"
-              >
-                <span>{pillar.emoji}</span>
-                <span className="font-medium">{pillar.label}</span>
-                <span className="text-white/50">({pillar.subtitle})</span>
-              </span>
-            ))}
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
-          >
-            <p className="font-display text-lg font-bold text-white">
-              {hero.workshopLabel}
-            </p>
-            <p className="mt-1 text-sm text-primary-light">{hero.workshopLanguage}</p>
-            <p className="mt-3 text-sm text-white/60">{hero.workshopNote}</p>
-            <div className="mt-4 flex items-center gap-3">
-              <span className="text-sm text-white/40 line-through">
-                {site.currency}{site.originalPrice}
-              </span>
-              <span className="font-display text-3xl font-bold gradient-text">
-                {site.currency}{site.price}
-              </span>
-            </div>
-            <p className="mt-2 text-sm font-semibold text-success">
-              {hero.bonusNote}
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="mt-5 space-y-1 text-sm text-white/55"
-          >
-            {hero.noList.map((item) => (
-              <p key={item}>{item}</p>
-            ))}
-            <p className="text-white/75">{hero.yesList}</p>
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            transition={defaultTransition}
-            className="mt-8 flex flex-wrap gap-4"
-          >
-            <CTAButton label={hero.primaryCta} size="large" />
+            <CTAButton
+              label={hero.primaryCta}
+              size="xl"
+              pulse
+              tone="light"
+              subLabel={`Only ${offer.seatsLeft} of ${offer.totalSeats} seats left · Instant confirmation`}
+              showSecure
+            />
             <CTAButton
               label={hero.secondaryCta}
               variant="outline"
-              className="!border-white/20 !text-white hover:!bg-white/10"
+              size="large"
+              showArrow={false}
+              href="#benefits"
+              external={false}
+              tone="light"
             />
           </motion.div>
 
           <motion.ul
             variants={fadeUp}
             transition={defaultTransition}
-            className="mt-8 grid gap-2 sm:grid-cols-2"
-            aria-label="Trust indicators"
+            className="mt-10 grid gap-3 sm:grid-cols-2"
+            aria-label="Workshop highlights"
           >
             {hero.trustIndicators.map((item) => (
-              <li key={item} className="flex items-center gap-2 text-sm text-white/65">
+              <li key={item} className="flex items-center gap-2.5 text-sm font-medium text-ink-soft">
                 <CheckCircle2 className="h-4 w-4 shrink-0 text-success" aria-hidden />
                 {item}
               </li>
@@ -138,60 +119,83 @@ export function Hero() {
           <motion.div
             variants={fadeUp}
             transition={defaultTransition}
-            className="mt-6 flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3"
+            className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-slate-200 pt-7"
           >
-            <div className="flex gap-0.5" aria-hidden>
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-              ))}
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2" aria-hidden>
+                {AVATARS.map((src) => (
+                  <div
+                    key={src}
+                    className="relative h-9 w-9 overflow-hidden rounded-full border-2 border-white bg-primary-soft shadow-xs"
+                  >
+                    <ContentImage src={src} alt="" width={36} height={36} className="h-full w-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              <div>
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-accent text-accent" aria-hidden />
+                  ))}
+                </div>
+                <p className="text-xs font-medium text-muted">
+                  {socialProof.rating} {socialProof.reviewLabel}
+                </p>
+              </div>
             </div>
-            <p className="text-sm text-white/70">
-              Trusted by 1,000+ community members across Telangana & AP
+
+            <p className="flex items-center gap-2 text-sm font-medium text-muted">
+              <Users className="h-4 w-4 text-primary" aria-hidden />
+              1,000+ transformed mornings
             </p>
           </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-md lg:max-w-none"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          className="relative mx-auto w-full max-w-md lg:max-w-lg"
         >
-          <div className="relative rounded-3xl border border-white/10 bg-white/5 p-2 shadow-glow backdrop-blur-sm">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <Image
-                src="/images/mentors/sampath-kumar.jpg"
-                alt="Sampath Kumar — Growth Mindset Mentor"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 480px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+          <div
+            aria-hidden
+            className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-accent/40 via-primary/25 to-info/25 blur-3xl"
+          />
+
+          <div className="image-premium relative animate-float-soft">
+            <ContentImage
+              src={hero.heroImage}
+              alt={hero.heroImageAlt}
+              width={1024}
+              height={1536}
+              priority
+              className="w-full"
+            />
+          </div>
+
+          <div className="relative mt-5 grid grid-cols-2 gap-3">
+            <div className="card-glass flex items-center gap-2.5 px-4 py-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-success-soft">
+                <CheckCircle2 className="h-5 w-5 text-success" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <p className="truncate text-xs font-bold text-navy">Live Workshop</p>
+                <p className="truncate text-[11px] font-medium text-muted">
+                  {hero.workshopLanguage}
+                </p>
+              </div>
             </div>
-            <div className="absolute -bottom-4 -left-4 h-28 w-28 overflow-hidden rounded-2xl border-4 border-dark shadow-xl">
-              <Image
-                src="/images/mentors/ram-prasad.jpg"
-                alt="Ram Prasad — Business Mentor"
-                width={112}
-                height={112}
-                className="h-full w-full object-cover object-top"
-                priority
-              />
-            </div>
-            <div className="absolute -right-2 top-8 rounded-2xl border border-white/10 bg-dark-elevated/90 px-4 py-3 backdrop-blur-md">
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-primary-light" aria-hidden />
-                <div>
-                  <p className="text-xs font-semibold text-white">Live Workshop</p>
-                  <p className="text-[10px] text-white/50">2 Hours · Telugu + English</p>
-                </div>
+
+            <div className="card-glass flex items-center gap-2.5 px-4 py-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-info-soft">
+                <MapPin className="h-5 w-5 text-info" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <p className="truncate text-xs font-bold text-navy">Grand Launch</p>
+                <p className="truncate text-[11px] font-medium text-muted">Telangana &amp; AP</p>
               </div>
             </div>
           </div>
-          <p className="mt-6 text-center text-sm text-white/50">
-            Guided by Sampath Kumar & Ram Prasad — The Law of Leadership
-          </p>
         </motion.div>
       </div>
     </section>
