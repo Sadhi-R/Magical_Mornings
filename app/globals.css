@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0b1120;
+  --color-dark-elevated: #151d32;
+  --color-primary: #7c3aed;
+  --color-primary-light: #a855f7;
+  --color-success: #10b981;
+  --color-white: #ffffff;
+
+  --font-sans: var(--font-inter), var(--font-telugu), system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-telugu), system-ui, sans-serif;
+
+  --shadow-card: 0 4px 24px rgba(11, 17, 32, 0.08);
+  --shadow-glow: 0 8px 40px rgba(124, 58, 237, 0.35);
+  --shadow-glass: 0 8px 32px rgba(11, 17, 32, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-dark antialiased bg-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/10 backdrop-blur-xl;
+  }
+
+  .glass-light {
+    @apply border border-dark/5 bg-white/70 backdrop-blur-xl shadow-glass;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+
+  .btn-glow {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #7c3aed 100%);
+    box-shadow: 0 4px 24px rgba(124, 58, 237, 0.4);
+  }
+
+  .btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(124, 58, 237, 0.55);
+  }
+
+  .btn-glow:focus-visible {
+    @apply outline-none ring-2 ring-primary-light ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary/30 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary/5;
+  }
+
+  .btn-outline:focus-visible {
+    @apply outline-none ring-2 ring-primary-light ring-offset-2;
+  }
+
+  .card-premium {
+    @apply rounded-2xl border border-dark/5 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .card-dark {
+    @apply rounded-2xl border border-white/10 bg-dark-elevated p-6 transition-all duration-300 hover:border-primary/30;
+  }
+
+  .badge-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
