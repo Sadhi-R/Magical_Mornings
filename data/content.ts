@@ -304,7 +304,7 @@ export const mentors = [
   {
     name: "Sampath Kumar",
     role: "Growth Mindset Mentor · Founder",
-    credentials: "Psychologist · B.A., B.Sc. · 15+ years' experience",
+    credentials: "B. Ed, M.Sc. Psychology, NLP · 15+ years' experience",
     image: "/images/mentors/sampath-kumar.jpg",
     greeting: "Hello, I'm Sampath Kumar,",
     bioTelugu:
@@ -332,7 +332,7 @@ export const mentors = [
       "Business strategy for engineers & professionals",
       "Digital marketing & AI automation expert",
       "Side-business & wealth growth specialist",
-      "Co-Founder — 10x Wealth Creators",
+      "Founder — 10x Wealth Creators",
     ],
   },
 ] as const;
