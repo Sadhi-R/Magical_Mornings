@@ -103,9 +103,9 @@ export const designedForYou = {
   image: "/images/morning-meditation-sunrise.png",
   points: [
     "Magical Mornings మీ morning ని mind, emotions, energy, direction కోసం ఒక simple reset system గా మార్చడంలో help చేస్తుంది.",
-    "ఇది complicated rituals గురించి కాదు. ఇది extreme discipline గురించి కాదు. ఇది overnight లో మీ life మొత్తం change చేయమని force చేయడం కాదు.",
+    "ఇది complicated rituals గురించి కాదు. ఇది extreme discipline గురించి కాదు. ఇది overnight లో మీ life మొత్తం change చేస్తానని చేసే fake promise కూడా కాదు.",
     "ఇది simple morning flow నేర్చుకోవడం గురించి — దాంతో మీరు మీ day ని better thoughts, better emotions, better energy తో start చేయగలుగుతారు.",
-    "ఎందుకంటే మీ morning change అయితే, మీరు think చేసే విధానం, feel అయ్యే విధానం, act చేసే విధానం కూడా slowly change అవుతుంది.",
+    "ఎందుకంటే మీ morning change అయితే, మీరు think చేసే విధానం, feel అయ్యే విధానం, act చేసే విధానం కూడా धीरेగా మారడం మొదలవుతుంది.",
   ],
   cta: "YES, I WANT TO JOIN",
 } as const;
@@ -151,7 +151,7 @@ export const dailyReset = {
   title: "The Magical Morning = Your Daily Reset Button For Mind, Body & Energy",
   image: "/images/magical-mornings-four-pillars.png",
   intro:
-    "మీ morning అనేది కేవలం మీ day beginning మాత్రమే కాదు. అది మీరు మీ mind కి ఇచ్చే first signal. మీ emotions కి ఇచ్చే first direction. మీ work, relationships, decisions లోకి తీసుకెళ్లే first energy.",
+    "మీ morning అనేది కేవలం మీ day beginning మాత్రమే కాదు. అది మీరు మీ mind కి ఇచ్చే first signal. మీ emotions కి ఇచ్చే direction. మీ actions కి ఇచ్చే foundation.",
   pillars: [
     { telugu: "ఆరోగ్యం", english: "Health — body & energy reset" },
     { telugu: "సంపద", english: "Wealth — financial focus & clarity" },
@@ -159,7 +159,7 @@ export const dailyReset = {
     { telugu: "వికాసం", english: "Career — confidence & growth direction" },
   ],
   closing:
-    "Magical Mornings మీ morning ని consciously use చేయడం నేర్పిస్తుంది, so that మీరు మీ day ని more clarity, confidence, calmness & alignment తో handle చేయగలుగుతారు.",
+    "Magical Mornings మీ morning ని consciously use చేయడం నేర్పిస్తుంది, so that మీరు మీ day ని more clarity, confidence, calmness & alignment తో ప్రారంభించగలరు.",
   cta: "Register Now",
 } as const;
 
@@ -171,7 +171,7 @@ export const framework = {
       step: 1,
       title: "Mind Reset",
       teluguIntro:
-        "ప్రపంచం మీ attention ని బయటకు pull చేయకముందే, మీ energy ని మీ దగ్గరకు తీసుకురావడం నేర్చుకోండి.",
+        "ప్రపంచం మీ attention ని బయటకు pull చేయకముందే, మీ energy ని మీ దగ్గరకు తీసుకురావడం నేర్చుకుంటారు.",
       teluguBody:
         "ఈ step లో మీరు pause అవ్వడం, breathe చేయడం, mind ని settle చేయడం, peaceful state తో day start చేయడం నేర్చుకుంటారు.",
       image: "/images/framework/step-1-mind-reset.jpg",
@@ -204,7 +204,7 @@ export const framework = {
       step: 4,
       title: "Action Execution",
       teluguIntro:
-        "మీ morning కొన్ని minutes మాత్రమే good feel చేయించకూడదు — ఆ energy ని మీ day లోకి carry చేయడానికి help చేయాలి.",
+        "మీ morning కొన్ని minutes మాత్రమే good feel చేయించకూడదు — ఆ energy ని మీ day లోకి carry చేయడానికి ఈ step key.",
       teluguBody:
         "ఈ step లో gratitude, intention & positive emotional energy తో మీ morning routine ని complete చేయడం, then 1–3 high-impact actions lock చేయడం నేర్చుకుంటారు.",
       image: "/images/framework/step-4-action-execution.jpg",
@@ -221,7 +221,7 @@ export const noRituals = {
   subtitle:
     "ప్రతి రోజు మీ mind, emotions, energy & direction ని reset చేయడానికి simple and powerful morning system మాత్రమే.",
   body:
-    "Magical Mornings real people కోసం designed చేయబడింది — real responsibilities ఉన్నవారి కోసం. మీరు homemaker అయినా, working professional అయినా, parent, student, entrepreneur అయినా — ఈ workshop మీకు practical & doable morning routine build చేయడంలో help చేస్తుంది.",
+    "Magical Mornings real people కోసం designed చేయబడింది — real responsibilities ఉన్నవారి కోసం. మీరు homemaker అయినా, working professional అయినా, entrepreneur అయినా లేదా student అయినా... ఈ workshop మీ morning ని practical గా transform చేయడానికి help చేస్తుంది.",
   cta: "Register Now + Claim Free Bonuses",
 } as const;
 
@@ -279,7 +279,7 @@ export const learning = {
     {
       english: "Inner alignment for better decisions & conscious living",
       telugu:
-        "Inner alignment వల్ల better decisions తీసుకోవడం, emotions ని better handle చేయడం, life లో more conscious గా move అవ్వడం ఎలా సాధ్యమవుతుందో తెలుసుకోండి.",
+        "Inner alignment వల్ల better decisions తీసుకోవడం, emotions ని better handle చేయడం, life లో more conscious గా move అవ్వడం ఎలా జరుగుతుందో తెలుసుకోండి.",
     },
     {
       english: "How to build consistency — not just start a routine",
@@ -304,7 +304,7 @@ export const mentors = [
   {
     name: "Sampath Kumar",
     role: "Growth Mindset Mentor · Founder",
-    credentials: "B. Ed, M.Sc. Psychology, NLP · 15+ years' experience",
+    credentials: "M.Sc. Psychology, NLP · 15+ years' experience",
     image: "/images/mentors/sampath-kumar.jpg",
     greeting: "Hello, I'm Sampath Kumar,",
     bioTelugu:
@@ -320,7 +320,7 @@ export const mentors = [
   },
   {
     name: "Ram Prasad",
-    role: "Engineers Business Mentor · Co-Founder",
+    role: "Engineers Business Mentor · Founder",
     credentials: "Business strategy · Digital marketing · AI automation",
     image: "/images/mentors/ram-prasad.jpg",
     greeting: "Hello, I'm Ram Prasad,",
@@ -392,7 +392,7 @@ export const testimonials = {
       role: "Entrepreneur · Hyderabad",
       image: "/images/testimonials/sadhi.jpg",
       quote:
-        "Morning routine change chesaka, clarity and energy completely different. Sampath Kumar & Ram Prasad guidance తో business decisions feel lighter. Magical Mornings system నేను still use చేస్తున్నాను.",
+        "Morning routine change chesaka, clarity and energy completely different. Sampath Kumar & Ram Prasad guidance తో business decisions feel lighter. Magical Mornings system నేను daily follow అవుతున్నాను.",
     },
     {
       id: "rajitha",
@@ -400,7 +400,7 @@ export const testimonials = {
       role: "Working Professional · Telangana",
       image: "/images/testimonials/rajitha.jpg",
       quote:
-        "Phone scrolling, hurry, stress — morning అంతా chaos. Now first 20 minutes mine. Family time improved, financial goals పై focus పెట్టగలిగాను. Simple system, big shift.",
+        "Phone scrolling, hurry, stress — morning అంతా chaos. Now first 20 minutes mine. Family time improved, financial goals పై focus పెట్టగలిగాను. Simple ga start ayi big difference ochindi.",
     },
     {
       id: "ramesh",
@@ -408,7 +408,7 @@ export const testimonials = {
       role: "Engineer · Side Business Builder",
       image: "/images/person.png",
       quote:
-        "Mind reset, body activation, goals, action — four steps commute ముందు fit అవుతాయి. Consistency finally possible. Overthinking తగ్గి, career & side business both clear.",
+        "Mind reset, body activation, goals, action — four steps commute ముందు fit అవుతాయి. Consistency finally possible. Overthinking తగ్గి, career & side business రెండింటిలో progress కనిపించింది.",
     },
   ],
 } as const;
@@ -437,12 +437,12 @@ export const faqs = [
   {
     question: "Is this workshop only for people who already wake up early?",
     answer:
-      "కాదు. Early wake up అవ్వడం start చేయాలని అనుకునే beginners కోసం కూడా ఈ workshop suitable. Perfect గా ఉండాల్సిన అవసరం లేదు. Begin చేయాలనే willingness ఉంటే చాలు.",
+      "కాదు. Early wake up అవ్వడం start చేయాలని అనుకునే beginners కోసం కూడా ఈ workshop suitable. Perfect గా ఉండాల్సిన అవసరం లేదు — consistent గా start చేయడమే ముఖ్యం.",
   },
   {
     question: "Will the workshop be conducted in Telugu?",
     answer:
-      "అవును. Workshop పూర్తిగా తెలుగులో నిర్వహిస్తారు — సులభంగా అర్థం చేసుకుని follow అవ్వచ్చు.",
+      "అవును. Workshop పూర్తిగా తెలుగులో నిర్వహిస్తారు — సులభంగా అర్థం చేసుకుని follow చేయడానికి.",
   },
   {
     question: "Do I need prior experience in meditation or manifestation?",
@@ -452,7 +452,7 @@ export const faqs = [
   {
     question: "What will I learn in this workshop?",
     answer:
-      "మీ mind, emotions, energy & focus ని reset చేయడానికి simple morning routine నేర్చుకుంటారు — Arogyam (Health), Sampada (Wealth), Bandham (Relationships), Vikasam (Career) across all four life pillars.",
+      "మీ mind, emotions, energy & focus ని reset చేయడానికి simple morning routine నేర్చుకుంటారు — Arogyam (Health), Sampada (Wealth), Bandham (Relationships), Vikasam (Career) నాలుగు pillars తో.",
   },
   {
     question: "Is this a live workshop?",
@@ -461,7 +461,7 @@ export const faqs = [
   {
     question: "What if I miss the live session?",
     answer:
-      "Live attend చేయడానికి try చేయండి, ఎందుకంటే real time లో energy, guidance & practice experience better గా ఉంటుంది. Recording access included.",
+      "Live attend చేయడానికి try చేయండి, ఎందుకంటే real time లో energy, guidance & practice experience better గా ఉంటుంది. Recording access ఉంటుంది for revision.",
   },
   {
     question: "How do I register?",
