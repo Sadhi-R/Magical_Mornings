@@ -3,7 +3,7 @@ export const site = {
   organization: "10x Wealth Creators",
   badge: "🔥 First in Telangana & Andhra Pradesh",
   ctaUrl: "https://rzp.io/rzp/magicalmornings",
-  siteUrl: "https://10xwealthcreators.com",
+  siteUrl: "https://magicalmornings.10xwealthcreators.com",
   email: "10xwealthcreators@gmail.com",
   phone: "+91 79810 88978",
   social: {

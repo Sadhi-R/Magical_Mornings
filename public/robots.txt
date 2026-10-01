@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://10xwealthcreators.com/sitemap.xml
+Sitemap: https://magicalmornings.10xwealthcreators.com/sitemap.xml
